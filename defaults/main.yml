@@ -1,2 +1,13 @@
 ---
-# defaults file for ansible-role-docker-containers
+# List of logins 
+# (https://docs.ansible.com/ansible/latest/modules/docker_login_module.html)
+docker_logins: []
+
+# List of images 
+# (https://docs.ansible.com/ansible/latest/modules/docker_image_module.html)
+docker_images: []
+
+# list of containers and their configuration
+# https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
+docker_containers: []
+
