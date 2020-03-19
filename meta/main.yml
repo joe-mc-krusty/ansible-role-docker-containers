@@ -2,7 +2,7 @@
 galaxy_info:
   role_name: docker-containers
   author: joe-mc-krusty
-  description: An Ansible role managing docker logins, images and containers on a server
+  description: An Ansible role for managing docker logins, images and containers on a server
   company: "GmxLabs"
   license: license (BSD, MIT)
   min_ansible_version: 2.9
