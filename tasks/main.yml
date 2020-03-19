@@ -1,5 +1,4 @@
 ---
-
 - name: manage docker logins
   import_tasks: logins.yml
 
