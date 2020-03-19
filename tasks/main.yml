@@ -1,2 +1,10 @@
 ---
-# tasks file for ansible-role-docker-containers
+
+- name: manage docker logins
+  import_tasks: logins.yml
+
+- name: manage docker images
+  import_tasks: images.yml
+
+- name: manage docker containers
+  import_tasks: containers.yml
