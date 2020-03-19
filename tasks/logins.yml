@@ -1,0 +1,27 @@
+---
+- name: Docker Logins
+  docker_login:
+    api_version: "{{ item.api_version | default(docker_login_api_version_default) }}"
+    ca_cert: "{{ item.ca_cert | default(omit) }}"
+    client_cert: "{{ item.client_cert | default(omit) }}"
+    client_key: "{{ item.client_key | default(omit) }}"
+    config_path: "{{ item.config_path | default(docker_login_config_path_default) }}"
+    debug: "{{ item.debug | default(docker_login_debug_default) }}"
+    docker_host: "{{ item.docker_host | default(docker_login_docker_host_default) }}"
+    email: "{{ item.email | default(omit) }}"
+    password: "{{ item.password | default(omit) }}"
+    reauthorize: "{{ item.reauthorize | default(docker_login_reauthorize_default) }}"
+    registry_url: "{{ item.registry_url | default(docker_login_registry_url) }}"
+    ssl_version: "{{ item.ssl_version | default(omit) }}"
+    state: "{{ item.state | default(docker_login_state_default) }}"
+    timeout: "{{ item.timeout | default(docker_login_timeout_default) }}"
+    tls: "{{ item.tls | default(docker_login_tls_default) }}"
+    tls_hostname: "{{ item.tls_hostname | default(docker_login_tls_hostname_default) }}"
+    username: "{{ item.username | default(omit) }}"
+    validate_certs: "{{ item.validate_certs | default(docker_login_validate_certs_default) }}"
+  loop: "{{ docker_logins }}"
+  register: docker_logins_stat
+
+- name: debug 
+  debug:
+    msg: "{{ docker_logins_stat }}"
