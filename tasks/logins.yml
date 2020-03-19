@@ -22,6 +22,6 @@
   loop: "{{ docker_logins }}"
   register: docker_logins_stat
 
-- name: debug 
+- name: debug
   debug:
-    msg: "{{ docker_logins_stat }}"
+    msg: "{{ docker_logins_stat }}"

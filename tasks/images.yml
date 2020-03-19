@@ -15,7 +15,7 @@
     docker_host: "{{ item.docker_host | default(docker_image_docker_host_default) }}"
     dockerfile: "{{ item.dockerfile | default(omit) }}"
     force_absent: "{{ item.force_absent | default(docker_image_force_absent_default) }}"
-    force_source: "{{ item.force_source | default(docker_image_force_source_default) }}"
+    force_source: "{{ item.force_source | default(docker_image_force_source_default) }}"
     force_tag: "{{ item.force_tag | default(docker_image_force_tag_default) }}"
     http_timeout: "{{ item.http_timeout | default(omit) }}"
     load_path: "{{ item.load_path | default(omit) }}"
@@ -32,6 +32,6 @@
   loop: "{{ docker_images }}"
   register: docker_images_stat
 
-- name: debug 
+- name: debug
   debug:
-    msg: "{{ docker_images_stat }}"
+    msg: "{{ docker_images_stat }}"
