@@ -1,0 +1,37 @@
+---
+- name: Docker Images
+  docker_image:
+    name: "{{ item.name if item.name is defined else item }}"
+    source: "{{ item.source | default(docker_image_source_default) }}"
+    api_version: "{{ item.api_version | default(docker_image_api_version_default) }}"
+    archive_path: "{{ item.archive_path | default(omit) }}"
+    build: "{{ item.build | default(omit) }}"
+    buildargs: "{{ item.buildargs | default(omit) }}"
+    ca_cert: "{{ item.ca_cert | default(omit) }}"
+    client_cert: "{{ item.client_cert | default(omit) }}"
+    client_key: "{{ item.client_key | default(omit) }}"
+    container_limits: "{{ item.container_limits | default(omit) }}"
+    debug: "{{ item.debug | default(docker_image_debug_default) }}"
+    docker_host: "{{ item.docker_host | default(docker_image_docker_host_default) }}"
+    dockerfile: "{{ item.dockerfile | default(omit) }}"
+    force_absent: "{{ item.force_absent | default(docker_image_force_absent_default) }}"
+    force_source: "{{ item.force_source | default(docker_image_force_source_default) }}"
+    force_tag: "{{ item.force_tag | default(docker_image_force_tag_default) }}"
+    http_timeout: "{{ item.http_timeout | default(omit) }}"
+    load_path: "{{ item.load_path | default(omit) }}"
+    path: "{{ item.path | default(omit) }}"
+    pull: "{{ item.pull | default(docker_image_pull_default) }}"
+    push: "{{ item.push | default(docker_image_push_default) }}"
+    repository: "{{ item.repository | default(omit) }}"
+    state: "{{ item.state | default(docker_image_state_default) }}"
+    tag: "{{ item.tag | default(docker_image_tag_default) }}"
+    timeout: "{{ item.timeout | default(docker_image_timeout_default) }}"
+    tls: "{{ item.tls | default(docker_image_tls_default) }}"
+    tls_hostname: "{{ item.tls_hostname | default(docker_image_tls_hostname_default) }}"
+    validate_certs: "{{ item.validate_certs | defautl(docker_image_validate_certs_default) }}"
+  loop: "{{ docker_images }}"
+  register: docker_images_stat
+
+- name: debug 
+  debug:
+    msg: "{{ docker_images_stat }}"
