@@ -11,3 +11,62 @@ docker_images: []
 # https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
 docker_containers: []
 
+
+# docker_image module defautls
+docker_image_api_version_default: "auto"
+docker_image_debug_default: no
+docker_image_docker_host_default: "unix://var/run/docker.sock"
+docker_image_force_absent_default: no
+docker_image_force_source_default: no
+docker_image_force_tag_default: no
+docker_image_pull_default: yes # will change to no in 2.12
+docker_image_push_default: no
+docker_image_source_default: "pull"
+docker_image_state_default: present
+docker_image_tag_default: "latest"
+docker_image_timeout_default: 60
+docker_image_tls_default: no
+docker_image_tls_hostname_default: "localhost"
+docker_image_validate_certs_default: no
+
+# docker_login module defaults
+docker_login_api_version_default: "auto"
+docker_login_config_path_default: "~/.docker/config.json"
+docker_login_debug_default: no
+docker_login_docker_host_default: "unix://var/run/docker.sock"
+docker_login_reauthorize_default: no
+docker_login_registry_url: "https://index.docker.io/v1/"
+docker_login_state_default: "present"
+docker_login_timeout_default: 60
+docker_login_tls_default: no
+docker_login_tls_hostname_default: "localhost"
+docker_login_validate_certs_default: no
+
+# docker_container module defaults
+docker_container_api_version_default: "auto"
+docker_container_auto_remove_default: no
+docker_container_cleanup_default: no
+docker_container_debug_default: no
+docker_container_detach_default: yes
+docker_container_docker_host_default: "unix://var/run/docker.sock"
+docker_container_force_kill_default: no
+docker_container_ignore_image_default: no
+docker_container_init_default: no
+docker_container_interactive: no
+docker_container_keep_volumes_default: yes
+docker_container_memory_default: "0"
+docker_container_output_logs_default: no
+docker_container_paused_default: no
+docker_container_privileged_default: no
+docker_container_pull_default: no
+docker_container_purge_networks_default: no
+docker_container_read_only_default: no
+docker_container_recreate_default: no
+docker_container_restart_default: no
+docker_container_state_default: "started"
+docker_container_timeout_default: 60
+docker_container_tls_default: no
+docker_container_tls_hostname_default: "localhost"
+docker_container_trust_image_content_default: no
+docker_container_tty_default: no
+docker_container_validate_certs_default: no
