@@ -7,6 +7,10 @@ docker_logins: []
 # (https://docs.ansible.com/ansible/latest/modules/docker_image_module.html)
 docker_images: []
 
+# List of networks
+# (https://docs.ansible.com/ansible/latest/modules/docker_network_module.html)
+docker_networks: []
+
 # list of containers and their configuration
 # https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
 docker_containers: []
@@ -41,6 +45,19 @@ docker_login_timeout_default: 60
 docker_login_tls_default: no
 docker_login_tls_hostname_default: "localhost"
 docker_login_validate_certs_default: no
+
+# docker_network module defaults
+docker_network_api_version_default: "auto"
+docker_network_appends_default: no
+docker_network_debug_default: no
+docker_network_docker_host_default: "unix://var/run/docker.sock"
+docker_network_driver_default: "bridge"
+docker_network_force_default: no
+docker_network_state_default: present
+docker_network_timeout_default: 60
+docker_network_tls_default: no
+docker_network_tls_hostname_default: "localhost"
+docker_network_validate_certs_default: no
 
 # docker_container module defaults
 docker_container_api_version_default: "auto"
