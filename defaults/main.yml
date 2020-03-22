@@ -11,6 +11,10 @@ docker_images: []
 # (https://docs.ansible.com/ansible/latest/modules/docker_network_module.html)
 docker_networks: []
 
+# List of volumes
+# (https://docs.ansible.com/ansible/latest/modules/docker_volume_module.html)
+docker_volumes: []
+
 # list of containers and their configuration
 # https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
 docker_containers: []
@@ -58,6 +62,19 @@ docker_network_timeout_default: 60
 docker_network_tls_default: no
 docker_network_tls_hostname_default: "localhost"
 docker_network_validate_certs_default: no
+
+# docker_volume module defaults
+docker_volume_api_version_default: "auto"
+docker_volume_debug_default: no
+docker_volume_docker_host_default: "unix://var/run/docker.sock"
+docker_volume_driver_default: "local"
+docker_volume_force_default: no
+docker_volume_recreate_default: never
+docker_volume_state_default: present
+docker_volume_timeout_default: 60
+docker_volume_tls_default: no
+docker_volume_tls_hostname_default: "localhost"
+docker_volume_validate_certs: no
 
 # docker_container module defaults
 docker_container_api_version_default: "auto"
