@@ -10,6 +10,6 @@
 
 - name: manage docker volumes
   import_tasks: volumes.yml
-  
+
 - name: manage docker containers
   import_tasks: containers.yml

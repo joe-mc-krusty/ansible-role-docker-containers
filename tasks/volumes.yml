@@ -5,7 +5,7 @@
     api_version: "{{ item.api_version | default(docker_volume_api_version_default) }}"
     ca_cert: "{{ item.ca_cert | default(omit) }}"
     client_cert: "{{ item.client_cert | default(omit) }}"
-    client_key: "{{ item.client_key | default(omit) }}"
+    client_key: "{{ item.client_key | default(omit) }}"
     debug: "{{ item.debug | default(docker_volume_debug_default) }}"
     docker_host: "{{ item.docker_host | default(docker_volume_docker_host_default) }}"
     driver: "{{ item.driver | default(docker_volume_driver_default) }}"
