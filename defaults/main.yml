@@ -88,7 +88,7 @@ docker_container_device_write_bps_default: []
 docker_container_device_write_iops_default: []
 docker_container_docker_host_default: "unix://var/run/docker.sock"
 docker_container_force_kill_default: no
-docker_container_healthcheck_default: []
+docker_container_healthcheck_default: {}
 docker_container_ignore_image_default: no
 docker_container_init_default: no
 docker_container_interactive_default: no
