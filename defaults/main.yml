@@ -74,7 +74,7 @@ docker_volume_state_default: present
 docker_volume_timeout_default: 60
 docker_volume_tls_default: no
 docker_volume_tls_hostname_default: "localhost"
-docker_volume_validate_certs: no
+docker_volume_validate_certs_default: no
 
 # docker_container module defaults
 docker_container_api_version_default: "auto"
