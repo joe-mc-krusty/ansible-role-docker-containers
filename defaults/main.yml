@@ -96,7 +96,7 @@ docker_container_pull_default: no
 docker_container_purge_networks_default: no
 docker_container_read_only_default: no
 docker_container_recreate_default: no
-docker_container_restart_default: no
+docker_container_restart_default: "no"
 docker_container_state_default: "started"
 docker_container_timeout_default: 60
 docker_container_tls_default: no
