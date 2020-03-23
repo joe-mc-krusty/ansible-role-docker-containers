@@ -20,7 +20,7 @@ docker_volumes: []
 docker_containers: []
 
 
-# docker_image module defautls
+# docker_image module defaults
 docker_image_api_version_default: "auto"
 docker_image_debug_default: no
 docker_image_docker_host_default: "unix://var/run/docker.sock"

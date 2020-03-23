@@ -26,7 +26,7 @@
     dns_opts: "{{ item.dns_opts | default(omit) }}"
     dns_search_domains: "{{ item.dns_search_domains | default(omit) }}"
     dns_servers: "{{ item.dns_servers | default(omit) }}"
-    docker_host: "{{ item.docker_host | defautl(docker_container_docker_host_default) }}"
+    docker_host: "{{ item.docker_host | default(docker_container_docker_host_default) }}"
     domainname: "{{ item.domainname | default(omit) }}"
     entrypoint: "{{ item.entrypoint | default(omit) }}"
     env: "{{ item.env | default(omit) }}"

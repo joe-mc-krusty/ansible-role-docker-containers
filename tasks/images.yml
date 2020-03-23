@@ -28,7 +28,7 @@
     timeout: "{{ item.timeout | default(docker_image_timeout_default) }}"
     tls: "{{ item.tls | default(docker_image_tls_default) }}"
     tls_hostname: "{{ item.tls_hostname | default(docker_image_tls_hostname_default) }}"
-    validate_certs: "{{ item.validate_certs | defautl(docker_image_validate_certs_default) }}"
+    validate_certs: "{{ item.validate_certs | default(docker_image_validate_certs_default) }}"
   loop: "{{ docker_images }}"
   register: docker_images_stat
 
