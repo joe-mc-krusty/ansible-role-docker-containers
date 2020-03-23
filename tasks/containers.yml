@@ -55,7 +55,7 @@
     memory_swap: "{{ item.memory_swap | default(omit) }}"
     memory_swappiness: "{{ item.memory_swappiness | default(omit) }}"
     mounts: "{{ item.mounts | default(omit) }}"
-    network_mode: "{{ item.network_mode | default(omit)"
+    network_mode: "{{ item.network_mode | default(omit) }}"
     networks: "{{ item.networks | default(omit) }}"
     networks_cli_compatible: "{{ item.networks_cli_compatible | default(omit) }}"
     oom_killer: "{{ item.oom_killer | default(omit) }}"
