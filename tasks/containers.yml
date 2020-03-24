@@ -102,3 +102,4 @@
 - name: debug
   debug:
     msg: "{{ docker_containers_stat }}"
+  when: docker_containers_debug|bool

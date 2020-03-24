@@ -35,3 +35,4 @@
 - name: debug
   debug:
     msg: "{{ docker_images_stat }}"
+  when: docker_containers_debug|bool

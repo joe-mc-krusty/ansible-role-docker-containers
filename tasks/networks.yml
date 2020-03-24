@@ -29,3 +29,9 @@
     tls_hostname: "{{ item.tls_hostname | default(docker_network_tls_hostname_default) }}"
     validate_certs: "{{ item.validate_certs | default(docker_network_validate_certs_default) }}"
   loop: "{{ docker_networks }}"
+  register: docker_networks_stat
+
+- name: debug
+  debug:
+    msg: "{{ docker_networks_stat }}"
+  when: docker_containers_debug|bool
