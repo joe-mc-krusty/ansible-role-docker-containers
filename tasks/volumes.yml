@@ -19,7 +19,7 @@
     tls: "{{ item.tls | default(docker_volume_tls_default) }}"
     tls_hostname: "{{ item.tls_hostname | default(docker_volume_tls_hostname_default) }}"
     validate_certs: "{{ item.validate_certs | default(docker_volume_validate_certs_default) }}"
-  loop: "{{ docker_networks }}"
+  loop: "{{ docker_volumes }}"
   register: docker_volumes_stat
 
 - name: debug
